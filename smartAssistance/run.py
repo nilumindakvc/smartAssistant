@@ -3,34 +3,21 @@ from langgraph.types import Command
 from langchain_core.messages import HumanMessage
 from langchain_core.messages import AIMessage
 
+try:
+    from colorama import init, Fore, Style
+    init(autoreset=True)
+except ImportError:
+    class _Fallback:
+        RESET_ALL = ""
+        GREEN = ""
+        CYAN = ""
+        YELLOW = ""
+    Fore = _Fallback()
+    Style = _Fallback()
 
-
-# request = "what are the recent updates of Antrophic ai company, how about the feedbacks for their new mythos model?"
-
-# messages=built_graph.invoke({"user_request":request,
-#                              "messages":[HumanMessage(content=request)]
-#                              },
-                            
-#                              config={"configurable": {"thread_id": "conv_1"}}
-#                             )
-
-# for m in messages["messages"]:
-#     m.pretty_print()
-
-#-----------------------------------------------------------
-
-# messages =built_graph.invoke(
-#     Command(resume={"approve":"yes"}),
-#     config={"configurable": {"thread_id": "conv_1"}}
-# )
-
-# for m in messages["messages"]:
-#     m.pretty_print()
 
 THREAD_ID = "conv_1"
 config={"configurable": {"thread_id": THREAD_ID}}
-
-
 
 def stream_output(graph_input):
     
@@ -66,7 +53,10 @@ print("hello , i am your pc assistance 😊,lets go!")
 
 while True:
     
-    user_query = input("what you are looking for?").strip()
+    user_query = input(f"\n{Fore.GREEN}what you are looking for? {Style.RESET_ALL}").strip()
+
+    if user_query:
+        print(f"{Fore.CYAN}You asked:{Style.RESET_ALL} {user_query}")
 
     if user_query.lower() in {"exit", "quit"}:
         break

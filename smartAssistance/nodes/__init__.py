@@ -1,4 +1,4 @@
-from .entertainment_node import entertainment_node
+from .entertainment_node import entertainment_tool_node,entertainment_llm_node
 from .file_ops_node import file_ops_tool_node,file_ops_llm_node
 from .clean_manager_node import clean_manager_llm_node,clean_manager_approval_node
 from .chat_research_node import chat_research_tool_node,chat_research_llm_node

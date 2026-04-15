@@ -70,4 +70,4 @@ def open_songhub(search_title: str):
             song.click()
             break
     
-    #update state accordingly      
+    return { "success":"true","tittle":search_title}    

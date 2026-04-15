@@ -15,7 +15,7 @@ Rules:
 - use arxiv tool to find any research related data.
 - use wiki tool to search wikipidia.
 - when providing final data to the user,dont try to provide large content of data, provide minial, enough and important 
-- dont follow any table structure for outputs, you need to follow, titles, paragraphs, facts and references
+- do not follow any table structure for outputs, you need to follow, titles, paragraphs, facts and references
 """
 
 
