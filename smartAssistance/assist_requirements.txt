@@ -1,0 +1,11 @@
+langchain
+langchain_community
+langchain-groq
+langgraph
+python-dotenv
+grandalf
+arxiv
+wikipedia
+winshell
+tempfile
+selenium
