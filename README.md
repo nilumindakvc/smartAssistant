@@ -17,7 +17,7 @@ This is a simple agentic assistant built with LangGraph and LangChain. It can pr
 - `langgraph` for graph-based agent workflows
 - `langchain` / `langchain_core` for LLM message handling
 - `selenium`, `wikipedia`, `arxiv`, and other helper libraries for tool functionality
-- groque api for llm support
+- Groque api for llm support
 
 ## Setup
 
